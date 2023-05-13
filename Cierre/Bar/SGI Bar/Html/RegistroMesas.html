@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar - Inicio de Administrador</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../CSS/registro.css">
+	
+</head>
+<body>
+	<header>
+		<nav>
+		
+				<ul>
+					
+					<li><a href="#" id="usuarios">Registro de Mesas</a></li>
+				<!--<button class="back-button"><i class="fas fa-arrow-left"></i> Regresar</button>-->
+			
+				<i class="bi bi-arrow-left-circle-fill"></i>
+					
+				
+				</ul>			
+		</nav>
+	</header>
+
+	<main>
+		<div id="contenido">
+			
+		</div>
+
+		<div id="registro-form" style="display:none;">
+			<form>
+
+                <label for="sede">Sede:</label>
+				<select id="sede" required>
+					<option value="">Seleccione una Sede</option>
+					<option value="sede">Sede_1</option>
+					<option value="Mesero">Sede_2</option>
+                    <option value="Cajero">Sede_3</option>
+                  
+				</select>
+
+				
+
+			
+
+				<label for="mesa">Mesa:</label>
+				<select id="mesa" required>
+					<option value="">Seleccione una cantidad de mesas</option>
+					<option value="Administrador">1</option>
+					<option value="Mesero">2</option>
+                    <option value="Cajero">3</option>
+                    <option value="Cajero">4</option>
+                    <option value="Cajero">5</option>
+				</select>
+
+				<button type="submit">Registrar</button>
+			</form>
+		</div>
+
+		
+		
+		
+	</main>
+
+	<script src="../Js/Registro.js"></script>

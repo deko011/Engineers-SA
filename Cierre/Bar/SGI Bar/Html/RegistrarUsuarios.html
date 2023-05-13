@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar - Inicio de Administrador</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../CSS/registro.css">
+	
+</head>
+<body>
+	<header>
+		<nav>
+		
+				<ul>
+					
+					<li><a href="#" id="usuarios">Registro de Usuarios</a></li>
+				<!--<button class="back-button"><i class="fas fa-arrow-left"></i> Regresar</button>-->
+			
+				<i class="bi bi-arrow-left-circle-fill"></i>
+					
+				
+				</ul>			
+		</nav>
+	</header>
+
+	<main>
+		<div id="contenido">
+			
+		</div>
+
+		<div id="registro-form" style="display:none;">
+			<form>
+
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" required>
+
+				<label for="cedula">Cédula:</label>
+				<input type="text" id="cedula" required>
+
+				<label for="usuario">Usuario:</label>
+				<input type="text" id="usuario" required readonly>
+
+				<label for="password">Contraseña:</label>
+				<input type="password" id="password" required readonly>
+
+				<label for="rol">Rol:</label>
+				<select id="rol" required>
+					<option value="">Seleccione un rol</option>
+					<option value="Administrador">Administrador</option>
+					<option value="Mesero">Mesero</option>
+                    <option value="Cajero">Cajero</option>
+				</select>
+
+				<button type="submit">Registrar</button>
+			</form>
+		</div>
+
+		
+		
+		
+	</main>
+
+	<script src="../Js/Registro.js"></script>

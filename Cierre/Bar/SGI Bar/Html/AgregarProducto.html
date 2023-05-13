@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar - Inicio de Administrador</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../CSS/InventarioAdmin.css">
+	<link rel="stylesheet" href="../CSS/nuevoproducto.css">
+ 
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,600i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+		<nav>
+		
+				<ul>
+					
+					<li><a href="#" id="inventario">Inventario </a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Sedes</a>
+                        <select id="Inventario" required>
+                            <option value="Sede_A">Sede_A</option>
+                            <option value="Sede_B">Sede_B</option>
+                            <option value="Sede_C">Sede_C</option>
+                        </select>
+                    </li>
+				
+				
+					
+				
+				</ul>			
+		</nav>
+	</header>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="Tabla-Container">
+        <table id="Tabla-Inventario"></table>
+      </div>
+      <div class="button-container">
+        <button type="button" class="btn btn-outline-danger" style="display:none;">Eliminar</button>
+        <button type="button" class="btn btn-outline-info" style="display:none;">Editar</button>
+      </div>
+      
+      <button type="button" class="btn btn-outline-success" style="display:none;" id="nuevo-producto">Nuevo Producto</button>
+
+      <div id="formulario" style="display:none;">
+        <form>
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" name="codigo" required><br><br>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+          <label for="producto">Producto:</label>
+          <input type="text" id="producto" name="producto"required><br><br>
+          <label for="cantidad">Cantidad:</label>
+          <input type="text" id="cantidad" name="cantidad"required><br><br>
+          <label for="fecha_ingreso">Fecha de ingreso:</label>
+          <input type="date" id="fecha_ingreso" name="fecha_ingreso"required><br><br>
+          <label for="Sedes">Sede:</label>
+          <select id="Sedes" required>
+            <option value="">Seleccione una Sede</option>
+            <option value="Sede_A">Sede_A</option>
+            <option value="Sede_B">Sede_B</option>
+            <option value="Sede_C">Sede_C</option>
+        </select>
+        <br>
+        <br>
+
+
+
+          <input type="button" value="Cancelar">
+          <input type="submit" value="Guardar">
+        </form>
+      </div>
+
+      <div id="formulario2" style="display:none;">
+        <form>
+          <label for="codigo">Código:</label>
+          <input type="text" id="Codigo" name="Codigo" required><br><br>
+          <div class="button-container">
+            <input type="button" value="Salir" onclick="ocultarFormulario2()"></button>
+            <input type="submit" value="Aceptar"></button>
+          </div>
+        
+        </form>
+      </div>
+
+      <div id="formulario3" style="display:none;">
+        <form>
+          <label for="codigo">Código:</label>
+          <input type="text" id="Codigo" name="Codigo" required><br><br>
+          <div class="button-container">
+            <input type="button" value="Salir" onclick="ocultarFormulario3(); ">
+            <input type="submit" value="Aceptar" onclick="mostrarformulario4(); establecerfechasalida(); obtenerFechaActual();">
+          </div>
+        
+        </form>
+      </div>
+
+
+      <div id="formulario4" style="display:none;">
+        <form>
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" name="codigo" required><br><br>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+          <label for="producto">Producto:</label>
+          <input type="text" id="producto" name="producto"required><br><br>
+          <label for="cantidad">Cantidad:</label>
+          <input type="text" id="cantidad" name="cantidad"required><br><br>
+          <label for="fecha_ingreso">Fecha de ingreso:</label>
+          <input type="date" id="fecha_ingreso" name="fecha_ingreso"required><br><br>
+          <label for="fecha_salida">Fecha de salida:</label>
+          <input type="date" id="fecha_salida" name="fecha_salida"required><br><br>
+          <label for="Sedes">Sede:</label>
+          <select id="Sedes" required>
+            <option value="">Seleccione una Sede</option>
+            <option value="Sede_A">Sede_A</option>
+            <option value="Sede_B">Sede_B</option>
+            <option value="Sede_C">Sede_C</option>
+        </select>
+        <br>
+        <br>
+
+
+
+          <input type="button" value="Cancelar">
+          <input type="submit" value="Guardar">
+        </form>
+      </div>
+
+      
+
+
+   
+   
+
+	<script src="../Js/MostrarInventarioAdmin.js"></script>
+    <script src="../Js/OcultarBotones.js"></script>
+    <script src="../Js/Formulario3.js"></script>
+
+</body>
+</html>
